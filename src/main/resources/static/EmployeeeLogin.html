@@ -1,20 +1,67 @@
 <!DOCTYPE html>
 <html lang="English" xmlns:th="http://www.thymeleaf.org">
 <head>
-   
     <meta charset="UTF-8">
     <title>EMPLOYEE LOGIN</title>
-     <link rel="stylesheet " th:href="@{Mystyle.css} "/>
+    <style>
+        /* CSS styles go here */
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        form {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            color: #333333;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <form id="emplform" th:action="@{/Employee}" method="post">
-        <h1 align="center">Employee Registry</h1><br>
-        Name: <input type="text" id="Name" th:field="*{Name}" placeholder="Enter your Name" required="required"><br>
-        ID: <input type="text" id="ID" th:field="*{id}" placeholder="Enter your EID" required="required"><br>
-        Phone Number: <input type="text" id="phono" th:field="*{phone}" placeholder="Enter your Phone Number" required="required"><br>
-        Age: <input type="text" id="Age" th:field="*{age}" placeholder="Enter your Age" required="required"><br>
-        <input align="middle" type="submit" value="Submit"><br>
-        Already have an account? <a href="Second.html">Login</a>
-    </form>
+<form id="emplform" th:action="@{/Employee}" method="post">
+    <h1 align="center">Employee Registry</h1><br>
+    Name: <input type="text" id="Name" th:field="*{Name}" placeholder="Enter your Name" required="required"><br>
+    ID: <input type="text" id="ID" th:field="*{id}" placeholder="Enter your EID" required="required"><br>
+    Phone Number: <input type="text" id="phono" th:field="*{phone}" placeholder="Enter your Phone Number" required="required"><br>
+    Age: <input type="text" id="Age" th:field="*{age}" placeholder="Enter your Age" required="required"><br>
+    <input align="middle" type="submit" value="Submit"><br>
+    Already have an account? <a href="Second.html">Login</a>
+</form>
 </body>
 </html>
